@@ -1,4 +1,4 @@
-<h2> C: Flink Batch Processing </h2>
+<h2> D: Flink Streaming </h2>
 
 <h3>Setting up the Environment</h3>
 <p>1. Download Flink from the Website <br/>
