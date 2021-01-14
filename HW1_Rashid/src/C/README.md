@@ -24,3 +24,5 @@ HW1_Rashid/src/C/flink-quickstart-java in IntelliJ <br/>
 <p>The output saved on the following path:
 
 `src/main/resources/output`
+
+![Flink Out](imgs/flink_sp.png)
