@@ -44,5 +44,5 @@ if __name__ == "__main__":
     joined_df.show()
 
     ## Repartioning to save dataframe in 1 partition for readibility
-    joined_df.repartition(1).write.csv(os.path.join(output_dir, 'spark1.csv'))
+    joined_df.repartition(1).write.csv(os.path.join(output_dir, 'spark1'))
     print(f"Head: {joined_df.take(5)}")

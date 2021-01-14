@@ -11,7 +11,7 @@ START_NODE = "17274"
 INFINITY = float("inf")
 
 output_dir = 'output'
-save_path = os.path.join(output_dir, 'shortest_path.txt')
+save_path = os.path.join(output_dir, 'shortest_path')
 graph_file = '../data/ca-GrQc.txt'
 
 
