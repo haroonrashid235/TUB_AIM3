@@ -9,7 +9,7 @@
 `conda activate mapreduce_env` <br/></p>
 <p>3. Install the dependencies using the following command:<br />
 
-`pip install -r requirements.txt` <br/> </p>
+`pip install -r requirements` <br/> </p>
 
 <h3> Running the exercises </h3>
 <p>4. Run the Part (1) using the following command: <br/>
@@ -23,8 +23,8 @@
 <p>The output is logged into console as well as saved to the dir:
  
 
-`output/mapreduce_1.log` for task 1.</br>
+`output/mapreduce_1` for task 1.</br>
 
-`output/mapreduce_2.log` for task 2.</br>
+`output/mapreduce_2` for task 2.</br>
 
 The files can be on local system or in the hdfs. In case of reading from hdfs, make sure that the hadoop cluster is running and files are added to the hadoop cluster. </p>
