@@ -10,7 +10,6 @@ output_dir = 'output'
 os.makedirs(output_dir, exist_ok=True)
 
 logging.basicConfig(filename=os.path.join(output_dir, 'mapreduce_1'), filemode='w', format='%(name)s - %(levelname)s - %(message)s',level=os.environ.get("LOGLEVEL", "INFO"))
-logging.warning('This will get logged to a file')
 
 REF_DATE = datetime.datetime(1995, 1, 1)
 
@@ -24,6 +23,7 @@ class MRWordCount(MRJob):
         line = line.strip()    # remove leading and trailing whitespace
         tokens = line.split("|")   # split the line into words
 
+        ## Default values if fields are absent in the line
         custName = "-1"
         custAddress = "-1"
         orderPrice = "-1"
@@ -32,13 +32,15 @@ class MRWordCount(MRJob):
 
 
         if len(tokens) == 8: ## customer data
+
+            # Filter acctbal
             acctbal = float(tokens[cust_dict["acctbal"]])
             if acctbal <= 1000:
                 return
             custName = tokens[cust_dict["name"]]
             custAddress = tokens[cust_dict["address"]]
             custKey = tokens[cust_dict["custkey"]]
-        else:
+        else: ## Orders data
             orderDate = tokens[order_dict["orderdate"]]
             orderDate_dt = datetime.datetime.strptime(orderDate, '%Y-%m-%d')
             if orderDate_dt <= REF_DATE:

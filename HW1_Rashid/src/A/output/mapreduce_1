@@ -1,7 +1,7 @@
 root - WARNING - This will get logged to a file
 mrjob.conf - INFO - No configs found; falling back on auto-configuration
 mrjob.conf - WARNING - No configs specified for inline runner
-mrjob.runner - INFO - Creating temp directory /var/folders/_7/dvvxyz7s15l8qjbkpsvyxm1c0000gn/T/mapreduce_1.haroonrashid.20210114.194729.091182
+mrjob.runner - INFO - Creating temp directory /var/folders/_7/dvvxyz7s15l8qjbkpsvyxm1c0000gn/T/mapreduce_1.haroonrashid.20210114.222909.809991
 mrjob.sim - INFO - Running step 1 of 1...
 root - INFO - ('10', ('Customer#000000010', '6LrEaV6KR6PLVcgl2ArL Q3rqzLzcT1 v2', 124374.81153846152))
 root - INFO - ('100', ('Customer#000000100', 'fptUABXcmkC5Wx', 183088.23200000002))
@@ -818,6 +818,6 @@ root - INFO - ('991', ('Customer#000000991', 'dK1Gzw1glT', 176692.43571428573))
 root - INFO - ('992', ('Customer#000000992', 'Vbi1NGfPeKw,XU', 155604.89818181816))
 root - INFO - ('994', ('Customer#000000994', 'sZjdeW4LT9EKopmlv3M Xbnbe3gXQ9JkoxPv ', 132841.81))
 root - INFO - ('998', ('Customer#000000998', 'fHRMFCGphazw9KvR1,EmNOUBG', 140264.37833333333))
-mrjob.runner - INFO - job output is in /var/folders/_7/dvvxyz7s15l8qjbkpsvyxm1c0000gn/T/mapreduce_1.haroonrashid.20210114.194729.091182/output
-mrjob.runner - INFO - Streaming final output from /var/folders/_7/dvvxyz7s15l8qjbkpsvyxm1c0000gn/T/mapreduce_1.haroonrashid.20210114.194729.091182/output...
-mrjob.runner - INFO - Removing temp directory /var/folders/_7/dvvxyz7s15l8qjbkpsvyxm1c0000gn/T/mapreduce_1.haroonrashid.20210114.194729.091182...
+mrjob.runner - INFO - job output is in /var/folders/_7/dvvxyz7s15l8qjbkpsvyxm1c0000gn/T/mapreduce_1.haroonrashid.20210114.222909.809991/output
+mrjob.runner - INFO - Streaming final output from /var/folders/_7/dvvxyz7s15l8qjbkpsvyxm1c0000gn/T/mapreduce_1.haroonrashid.20210114.222909.809991/output...
+mrjob.runner - INFO - Removing temp directory /var/folders/_7/dvvxyz7s15l8qjbkpsvyxm1c0000gn/T/mapreduce_1.haroonrashid.20210114.222909.809991...
