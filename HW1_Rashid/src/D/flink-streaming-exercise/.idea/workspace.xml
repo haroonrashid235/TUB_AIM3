@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8e773a55-5b52-4d46-9f59-79164e886bc2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1n3fTkQ0sGHBPQjQ9YsTO7BaOqn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="de.tuberlin.dima.aim3.exercises.streaming" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="flink-stream" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="de.tuberlin.dima.aim3.exercises.Main" />
+      <module name="flink-streaming-exercise" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/resources/full-game.txt" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e773a55-5b52-4d46-9f59-79164e886bc2" name="Default Changelist" comment="" />
+      <created>1610623704651</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610623704651</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="91" key="#Project_Structure" timestamp="1610631316882">
+      <screen x="0" y="25" width="1440" height="809" />
+    </state>
+    <state x="320" y="91" key="#Project_Structure/0.25.1440.809@0.25.1440.809" timestamp="1610631316882" />
+    <state x="184" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610648447658">
+      <screen x="0" y="25" width="1440" height="809" />
+    </state>
+    <state x="184" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.809@0.25.1440.809" timestamp="1610648447658" />
+    <state x="184" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.815@0.25.1440.815" timestamp="1610627571598" />
+    <state x="467" y="235" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610646060753">
+      <screen x="0" y="25" width="1440" height="809" />
+    </state>
+    <state x="467" y="235" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.809@0.25.1440.809" timestamp="1610646060753" />
+    <state x="533" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1610644947191">
+      <screen x="0" y="25" width="1440" height="809" />
+    </state>
+    <state x="533" y="142" key="#com.intellij.ide.util.MemberChooser/0.25.1440.809@0.25.1440.809" timestamp="1610644947191" />
+    <state x="457" y="216" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1610623816755">
+      <screen x="0" y="25" width="1440" height="815" />
+    </state>
+    <state x="457" y="216" key="#com.intellij.ide.util.TreeClassChooserDialog/0.25.1440.815@0.25.1440.815" timestamp="1610623816755" />
+    <state x="458" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610634727192">
+      <screen x="0" y="25" width="1440" height="809" />
+    </state>
+    <state x="458" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.809@0.25.1440.809" timestamp="1610634727192" />
+    <state width="1398" height="205" key="GridCell.Tab.0.bottom" timestamp="1610648450494">
+      <screen x="0" y="25" width="1440" height="809" />
+    </state>
+    <state width="1398" height="205" key="GridCell.Tab.0.bottom/0.25.1440.809@0.25.1440.809" timestamp="1610648450494" />
+    <state width="1398" height="205" key="GridCell.Tab.0.center" timestamp="1610648450492">
+      <screen x="0" y="25" width="1440" height="809" />
+    </state>
+    <state width="1398" height="205" key="GridCell.Tab.0.center/0.25.1440.809@0.25.1440.809" timestamp="1610648450492" />
+    <state width="1398" height="205" key="GridCell.Tab.0.left" timestamp="1610648450492">
+      <screen x="0" y="25" width="1440" height="809" />
+    </state>
+    <state width="1398" height="205" key="GridCell.Tab.0.left/0.25.1440.809@0.25.1440.809" timestamp="1610648450492" />
+    <state width="1398" height="205" key="GridCell.Tab.0.right" timestamp="1610648450493">
+      <screen x="0" y="25" width="1440" height="809" />
+    </state>
+    <state width="1398" height="205" key="GridCell.Tab.0.right/0.25.1440.809@0.25.1440.809" timestamp="1610648450493" />
+    <state x="258" y="87" key="Maven.ArtifactSearchDialog" timestamp="1610630413101">
+      <screen x="0" y="25" width="1440" height="809" />
+    </state>
+    <state x="258" y="87" key="Maven.ArtifactSearchDialog/0.25.1440.809@0.25.1440.809" timestamp="1610630413101" />
+    <state x="208" y="25" key="SettingsEditor" timestamp="1610631214672">
+      <screen x="0" y="25" width="1440" height="809" />
+    </state>
+    <state x="208" y="25" key="SettingsEditor/0.25.1440.809@0.25.1440.809" timestamp="1610631214672" />
+    <state x="434" y="327" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1610631213164">
+      <screen x="0" y="25" width="1440" height="809" />
+    </state>
+    <state x="434" y="327" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.25.1440.809@0.25.1440.809" timestamp="1610631213164" />
+  </component>
+</project>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="22330b71-cfba-46c4-b9e8-b2bb4e0cacf0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1mbTCmNlGSsb9Ilp7UqxDbOUvCJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="22330b71-cfba-46c4-b9e8-b2bb4e0cacf0" name="Default Changelist" comment="" />
+      <created>1609761165433</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609761165433</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="570" y="321" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1609761180197">
+      <screen x="0" y="25" width="1440" height="807" />
+    </state>
+    <state x="570" y="321" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.25.1440.807@0.25.1440.807" timestamp="1609761180197" />
+    <state x="123" y="48" key="new project wizard" timestamp="1609761569385">
+      <screen x="0" y="25" width="1440" height="807" />
+    </state>
+    <state x="123" y="48" key="new project wizard/0.25.1440.807@0.25.1440.807" timestamp="1609761569385" />
+  </component>
+</project>
