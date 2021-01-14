@@ -9,7 +9,7 @@ import datetime
 output_dir = 'output' 
 os.makedirs(output_dir, exist_ok=True)
 
-logging.basicConfig(filename=os.path.join(output_dir, 'mapreduce_2.log'), filemode='w', format='%(name)s - %(levelname)s - %(message)s',level=os.environ.get("LOGLEVEL", "INFO"))
+logging.basicConfig(filename=os.path.join(output_dir, 'mapreduce_2'), filemode='w', format='%(name)s - %(levelname)s - %(message)s',level=os.environ.get("LOGLEVEL", "INFO"))
 
 REF_DATE = datetime.datetime(1995, 1, 1)
 
