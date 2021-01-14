@@ -4,9 +4,12 @@ import sys
 import os
 import logging
 import datetime
+import os
 
+output_dir = 'output' 
+os.makedirs(output_dir, exist_ok=True)
 
-logging.basicConfig(filename='mapreduce_1.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s',level=os.environ.get("LOGLEVEL", "INFO"))
+logging.basicConfig(filename=os.path.join(output_dir, 'mapreduce_1.log'), filemode='w', format='%(name)s - %(levelname)s - %(message)s',level=os.environ.get("LOGLEVEL", "INFO"))
 logging.warning('This will get logged to a file')
 
 REF_DATE = datetime.datetime(1995, 1, 1)
