@@ -80,15 +80,13 @@ public class FootballStatisticsImpl implements FootballStatistics {
     public void writeAvertedGoalEvents() {
         STREAM_EXECUTION_ENVIRONMENT.setParallelism(1);
 
-        SingleOutputStreamOperator<Tuple2<String, Integer>> out = events.filter(new BallSensorInMatchFilter())
+       events.filter(new BallSensorInMatchFilter())
                 .keyBy(DebsFeature::getSensorId)
                 .timeWindow(Time.minutes(2))
                 .apply(new AvertedGoalWindowFunction())
                 .keyBy(0)
-                .map(new AvertedGoalAggregator());
-                out.print();
-                
-//                .writeAsCsv("src/main/resources/avertedGoals.csv", FileSystem.WriteMode.OVERWRITE);
+                .map(new AvertedGoalAggregator())
+                .writeAsCsv("src/main/resources/avertedGoals.csv", FileSystem.WriteMode.OVERWRITE);
     }
 
     /**
@@ -144,7 +142,7 @@ public class FootballStatisticsImpl implements FootballStatistics {
     }
 
     public void execEnv() throws Exception {
-        STREAM_EXECUTION_ENVIRONMENT.execute("Flink");
+        STREAM_EXECUTION_ENVIRONMENT.execute("Flink2");
     }
 
 

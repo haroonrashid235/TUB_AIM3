@@ -21,7 +21,6 @@ public class Main {
         FootballStatistics statistics = FootballStatisticsProxy.newInstance(FootballStatistics.newInstance(filePath));
 
         statistics.writeHighestAvgDistanceCovered();
-
         statistics.writeAvertedGoalEvents();
 
         statistics.execEnv();

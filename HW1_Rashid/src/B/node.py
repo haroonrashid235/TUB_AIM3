@@ -1,5 +1,3 @@
-
-# START_NODE = "17274"
 INFINITY = float("inf")
 class Node:
     """docstring for Node"""

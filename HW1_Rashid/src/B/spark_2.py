@@ -2,18 +2,16 @@ from pyspark import SparkContext
 from pyspark.sql import SparkSession
 import pandas as pd
 from node import Node
+import os
 
 import datetime
 
-# spark = SparkSession.builder \
-#     .master("local") \
-#     .appName("Spark2") \
-#     .getOrCreate()
 
 START_NODE = "17274"
 INFINITY = float("inf")
 
-save_path = 'shortest_path.txt'
+output_dir = 'output'
+save_path = os.path.join(output_dir, 'shortest_path.txt')
 graph_file = '../data/ca-GrQc.txt'
 
 
@@ -106,6 +104,8 @@ while True:
     count.value = saveRDD.count()
 
 finalResultsRDD = adjRDD.map(lambda line: format_result(line))
-finalResultsRDD.saveAsTextFile(save_path)
 
-print(finalResultsRDD.take(5))
+# Results are partitioned into one machine to see the output in one file
+finalResultsRDD.repartition(1).saveAsTextFile(save_path)
+
+print(finalResultsRDD.take(20))

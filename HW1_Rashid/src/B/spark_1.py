@@ -1,12 +1,13 @@
 from pyspark import SparkContext
 from pyspark.sql import SparkSession
 import pandas as pd
+import os
 
 import datetime
 
-# import findspark
-# findspark.init()
 
+output_dir = 'output' 
+os.makedirs(output_dir, exist_ok=True)
 
 orders_file = '../data/orders.csv'
 customer_file = '../data/customers.csv'
@@ -40,6 +41,8 @@ if __name__ == "__main__":
                 .agg({"price":"avg"})
 
     joined_df = customers_df.join(orders_df, customers_df.custkey == orders_df.custkey).drop('custkey')
-
     joined_df.show()
-    print(f"Count: {joined_df.count()}")
+
+    ## Repartioning to save dataframe in 1 partition for readibility
+    joined_df.repartition(1).write.csv(os.path.join(output_dir, 'spark1.csv'))
+    print(f"Head: {joined_df.take(5)}")
