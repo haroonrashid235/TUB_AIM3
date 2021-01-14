@@ -13,6 +13,7 @@ import org.apache.flink.api.java.tuple.Tuple3;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.core.fs.FileSystem;
+import org.apache.flink.mesos.shaded.com.fasterxml.jackson.databind.node.BigIntegerNode;
 import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.datastream.KeyedStream;
@@ -37,6 +38,7 @@ import scala.tools.nsc.transform.patmat.Logic;
 import javax.annotation.Nullable;
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
@@ -80,25 +82,21 @@ public class FootballStatisticsImpl implements FootballStatistics {
     public void writeAvertedGoalEvents() {
         STREAM_EXECUTION_ENVIRONMENT.setParallelism(1);
 
-       events.filter(new BallSensorInMatchFilter())
+        events.assignTimestampsAndWatermarks(new WatermarkAssigner()).
+                filter(new BallSensorInMatchFilter())
                 .keyBy(DebsFeature::getSensorId)
-                .timeWindow(Time.minutes(2))
+                .timeWindow(Time.minutes(1))
                 .apply(new AvertedGoalWindowFunction())
                 .keyBy(0)
                 .map(new AvertedGoalAggregator())
-                .writeAsCsv("src/main/resources/avertedGoals.csv", FileSystem.WriteMode.OVERWRITE);
+                .writeAsCsv("src/main/resources/avertedGoals", FileSystem.WriteMode.OVERWRITE);
     }
 
     /**
-     * Highest average distance of player A1 (of Team A) ran in every 5 minutes duration. You can skip 1 minute duration between every two durations.
+     * Highest average distance of player A1 (of Team A) ran in every 5 minutes duration.
      */
     @Override
     public void writeHighestAvgDistanceCovered() {
-        singleSensorWriteHighestAvgDistanceCovered();
-
-    }
-
-    private void singleSensorWriteHighestAvgDistanceCovered() {
         STREAM_EXECUTION_ENVIRONMENT.setParallelism(1);
 
         events.assignTimestampsAndWatermarks(new WatermarkAssigner())
@@ -106,7 +104,8 @@ public class FootballStatisticsImpl implements FootballStatistics {
                 .keyBy(DebsFeature::getSensorId)
                 .window(SlidingEventTimeWindows.of(Time.minutes(5), Time.minutes(1)))
                 .apply(new SingleSensorDistanceWindowFunction())
-                .writeAsCsv("src/main/resources/highestAvg.csv", FileSystem.WriteMode.OVERWRITE);
+                .writeAsCsv("src/main/resources/highestAvg", FileSystem.WriteMode.OVERWRITE);
+
     }
 
     /**
@@ -145,7 +144,6 @@ public class FootballStatisticsImpl implements FootballStatistics {
         STREAM_EXECUTION_ENVIRONMENT.execute("Flink2");
     }
 
-
     private class SingleSensorPlayerInMatchFilter implements FilterFunction<DebsFeature> {
         @Override
         public boolean filter(DebsFeature debsFeature) throws Exception {
@@ -161,11 +159,14 @@ public class FootballStatisticsImpl implements FootballStatistics {
 
     private static class SingleSensorDistanceWindowFunction extends RichWindowFunction<DebsFeature, Tuple3<BigInteger, BigInteger, Double>, Long, TimeWindow> {
 
-        private transient ValueState<Double> maxDistance;
+        private transient ValueState<Tuple3<BigInteger, BigInteger, Double>> maxDistance;
 
         @Override
         public void open(Configuration parameters) {
-            ValueStateDescriptor<Double> stateDescriptor = new ValueStateDescriptor<>("max-avg", TypeInformation.of(Double.class));
+            ValueStateDescriptor<Tuple3<BigInteger, BigInteger, Double>> stateDescriptor =
+                    new ValueStateDescriptor<Tuple3<BigInteger, BigInteger, Double>>(
+                            "max-avg",
+                            TypeInformation.of(new TypeHint<Tuple3<BigInteger, BigInteger, Double>>() {}));
             maxDistance = getRuntimeContext().getState(stateDescriptor);
         }
 
@@ -179,26 +180,24 @@ public class FootballStatisticsImpl implements FootballStatistics {
             double aggDistance = 0;
 
             for (int i = 1; i < inputs.size(); i++) {
-                aggDistance = aggDistance + euclidean(inputs.get(i - 1).getPositionX(), inputs.get(i - 1).getPositionY(), inputs.get(i - 1).getPositionZ(), inputs.get(i).getPositionX(),
-                        inputs.get(i).getPositionY(), inputs.get(i).getPositionZ());
+                aggDistance = aggDistance + euclidean(inputs.get(i - 1).getPositionX(), inputs.get(i - 1).getPositionY(), inputs.get(i).getPositionX(),
+                        inputs.get(i).getPositionY());
             }
 
             double avgDistance = aggDistance / (inputs.size() - 1);
-            if (maxDistance.value() == null || maxDistance.value() < avgDistance) {
-                maxDistance.update(avgDistance);
+            if (maxDistance.value() == null || maxDistance.value().f2 < avgDistance) {
+                maxDistance.update(new Tuple3<>(inputs.get(0).getTimeStamp(), inputs.get(inputs.size() - 1).getTimeStamp(), avgDistance));
             }
 
-            out.collect(new Tuple3<>(inputs.get(0).getTimeStamp(), inputs.get(inputs.size() - 1).getTimeStamp(), maxDistance.value()));
+            out.collect(maxDistance.value());
 
         }
 
-        private double euclidean(int X1, int Y1, int Z1, int X2, int Y2, int Z2) {
+        private double euclidean(int X1, int Y1, int X2, int Y2) {
             return Math.sqrt(
-                    Math.pow(X1 - X2, 2) + Math.pow(Y1 - Y2, 2) + Math.pow(Z1 - Z2, 2)
+                    Math.pow(X1 - X2, 2) + Math.pow(Y1 - Y2, 2)
             );
         }
-
-
     }
 
 
@@ -217,9 +216,17 @@ public class FootballStatisticsImpl implements FootballStatistics {
     }
 
     private class BallSensorInMatchFilter implements FilterFunction<DebsFeature> {
+        private final List<Long> ids = Arrays.asList(4L, 8L, 10L, 12L);
+
         @Override
         public boolean filter(DebsFeature debsFeature) throws Exception {
-            return false;
+            return ids.contains(debsFeature.getSensorId()) && valueInMatchTimeBounds(debsFeature.getTimeStamp());
+        }
+
+        private boolean valueInMatchTimeBounds(BigInteger timeStamp) {
+            return (timeStamp.compareTo(START) >= 0 &&
+                    timeStamp.compareTo(FIRST_HALF_END) < 0) || (
+                    timeStamp.compareTo(SECOND_HALF_START) >= 0 && timeStamp.compareTo(END) < 0);
         }
     }
 

@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d8cb2d0-9fff-4ad1-bc4b-7b7ca0a8322e" name="Default Changelist" comment="" />
+    <list default="true" id="6d8cb2d0-9fff-4ad1-bc4b-7b7ca0a8322e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hwc/ShortestPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hwc/ShortestPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/flink-batch.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../D/flink-streaming-exercise/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../D/flink-streaming-exercise/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
   <component name="ProjectId" id="1n1tBEmPYYJkYndZDJf6h52eojt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,6 +24,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -28,53 +39,6 @@
     <configuration name="flink_batch" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hwc.ShortestPath" />
       <module name="flink-batch" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="flink-batch" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="flink-batch" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -94,14 +58,15 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="91" key="#Project_Structure" timestamp="1610569713107">
+    <state x="391" y="159" key="#Project_Structure" timestamp="1610656947323">
       <screen x="0" y="25" width="1440" height="809" />
     </state>
-    <state x="320" y="91" key="#Project_Structure/0.25.1440.809@0.25.1440.809" timestamp="1610569713107" />
-    <state x="184" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610569837916">
-      <screen x="0" y="25" width="1440" height="809" />
+    <state x="391" y="159" key="#Project_Structure/0.25.1440.809@0.25.1440.809" timestamp="1610656947323" />
+    <state x="283" y="126" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610656482945">
+      <screen x="0" y="25" width="1440" height="813" />
     </state>
     <state x="184" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.809@0.25.1440.809" timestamp="1610569837916" />
+    <state x="283" y="126" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.813@0.25.1440.813" timestamp="1610656482945" />
     <state x="457" y="216" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1610569639651">
       <screen x="0" y="25" width="1440" height="809" />
     </state>
@@ -110,25 +75,29 @@
       <screen x="0" y="25" width="1440" height="809" />
     </state>
     <state x="458" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.809@0.25.1440.809" timestamp="1610571204997" />
-    <state width="1398" height="205" key="GridCell.Tab.0.bottom" timestamp="1610623596970">
-      <screen x="0" y="25" width="1440" height="815" />
+    <state width="1398" height="159" key="GridCell.Tab.0.bottom" timestamp="1610658027493">
+      <screen x="0" y="25" width="1440" height="813" />
     </state>
     <state width="1398" height="205" key="GridCell.Tab.0.bottom/0.25.1440.809@0.25.1440.809" timestamp="1610608541141" />
+    <state width="1398" height="159" key="GridCell.Tab.0.bottom/0.25.1440.813@0.25.1440.813" timestamp="1610658027493" />
     <state width="1398" height="205" key="GridCell.Tab.0.bottom/0.25.1440.815@0.25.1440.815" timestamp="1610623596970" />
-    <state width="1398" height="205" key="GridCell.Tab.0.center" timestamp="1610623596967">
-      <screen x="0" y="25" width="1440" height="815" />
+    <state width="1398" height="159" key="GridCell.Tab.0.center" timestamp="1610658027492">
+      <screen x="0" y="25" width="1440" height="813" />
     </state>
     <state width="1398" height="205" key="GridCell.Tab.0.center/0.25.1440.809@0.25.1440.809" timestamp="1610608541140" />
+    <state width="1398" height="159" key="GridCell.Tab.0.center/0.25.1440.813@0.25.1440.813" timestamp="1610658027492" />
     <state width="1398" height="205" key="GridCell.Tab.0.center/0.25.1440.815@0.25.1440.815" timestamp="1610623596967" />
-    <state width="1398" height="205" key="GridCell.Tab.0.left" timestamp="1610623596967">
-      <screen x="0" y="25" width="1440" height="815" />
+    <state width="1398" height="159" key="GridCell.Tab.0.left" timestamp="1610658027492">
+      <screen x="0" y="25" width="1440" height="813" />
     </state>
     <state width="1398" height="205" key="GridCell.Tab.0.left/0.25.1440.809@0.25.1440.809" timestamp="1610608541139" />
+    <state width="1398" height="159" key="GridCell.Tab.0.left/0.25.1440.813@0.25.1440.813" timestamp="1610658027492" />
     <state width="1398" height="205" key="GridCell.Tab.0.left/0.25.1440.815@0.25.1440.815" timestamp="1610623596967" />
-    <state width="1398" height="205" key="GridCell.Tab.0.right" timestamp="1610623596967">
-      <screen x="0" y="25" width="1440" height="815" />
+    <state width="1398" height="159" key="GridCell.Tab.0.right" timestamp="1610658027493">
+      <screen x="0" y="25" width="1440" height="813" />
     </state>
     <state width="1398" height="205" key="GridCell.Tab.0.right/0.25.1440.809@0.25.1440.809" timestamp="1610608541140" />
+    <state width="1398" height="159" key="GridCell.Tab.0.right/0.25.1440.813@0.25.1440.813" timestamp="1610658027493" />
     <state width="1398" height="205" key="GridCell.Tab.0.right/0.25.1440.815@0.25.1440.815" timestamp="1610623596967" />
   </component>
 </project>

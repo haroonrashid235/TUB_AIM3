@@ -73,7 +73,7 @@ public class ShortestPath {
 
         DataSet<Tuple3<Long, Long, String>> result = iteration.closeWith(changes, changes);
         result.map(t -> "17274 | " + String.format("%1$-5s", t.f0) + " | " + String.format("%1$-80s", t.f2) + " | " + (t.f1 == Long.MAX_VALUE ? "INFINITY" : t.f1))
-                .writeAsText("src/main/resources/output.txt").setParallelism(1);
+                .writeAsText("src/main/resources/output").setParallelism(1);
 
         // execute program
         env.execute("Shortest Path Job");

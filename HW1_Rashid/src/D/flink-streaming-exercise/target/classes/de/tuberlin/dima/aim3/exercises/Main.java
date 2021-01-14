@@ -20,7 +20,10 @@ public class Main {
         String filePath = args[0].trim();
         FootballStatistics statistics = FootballStatisticsProxy.newInstance(FootballStatistics.newInstance(filePath));
 
+        System.out.println("Processing Events to calculate avg Distance covered... ");
         statistics.writeHighestAvgDistanceCovered();
+        System.out.println("Writing Averted Goal Events... ");
+
         statistics.writeAvertedGoalEvents();
 
         statistics.execEnv();
