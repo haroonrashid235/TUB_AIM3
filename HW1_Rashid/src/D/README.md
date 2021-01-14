@@ -22,3 +22,4 @@ HW1_Rashid/src/D/flink-streaming-exercise in IntelliJ <br/>
 
 `src/main/resources/output/highestAvg` and `src/main/resources/output/avertedGoals`
 
+![Flink Streaming](imgs/flink_stream.png)
